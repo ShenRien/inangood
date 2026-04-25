@@ -1,0 +1,48 @@
+---
+import { slide } from 'astro:transitions';
+
+import Slide1 from '../assets/slide/25.png'
+import Slide2 from '../assets/slide/26.png'
+import Slide3 from '../assets/slide/27.png'
+import Slide4 from '../assets/slide/28.png'
+import Slide5 from '../assets/slide/29.png'
+import Slide6 from '../assets/slide/30.png'
+import Slide7 from '../assets/slide/31.png'
+import Slide8 from '../assets/slide/32.png'
+import Slide9 from '../assets/slide/33.png'
+import Slide10 from '../assets/slide/34.png'
+import Slide11 from '../assets/slide/35.png'
+import Slide12 from '../assets/slide/36.png'
+import Slide13 from '../assets/slide/37.png'
+import Slide14 from '../assets/slide/38.png'
+
+---
+
+<div transition:animate={slide({ duration: '0.4s' })} class="Slider grid grid-cols-7 gap-2 items-center" >
+    <img src={Slide1.src} class="col-span-1" />
+    <img src={Slide2.src} class="col-span-1" />
+    <img src={Slide3.src} class="col-span-1" />
+    <img src={Slide4.src} class="col-span-1" />
+    <img src={Slide5.src} class="col-span-1" />
+    <img src={Slide6.src} class="col-span-1" />
+    <img src={Slide7.src} class="col-span-1" />
+    <img src={Slide8.src} class="col-span-1" />
+    <img src={Slide9.src} class="col-span-1" />
+    <img src={Slide10.src} class="col-span-1" />
+    <img src={Slide11.src} class="col-span-1" />
+    <img src={Slide12.src} class="col-span-1" />
+    <img src={Slide13.src} class="col-span-1" />
+    <img src={Slide14.src} class="col-span-1" />
+</div>
+
+<style>
+    .Slider {
+        width: 1440px;
+        max-width: 100%;
+        padding: 5pt;
+    }
+    .Slider img {
+        width: auto;
+        border-radius: 15px;
+    }
+</style>

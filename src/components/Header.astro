@@ -3,7 +3,7 @@
 ---
 <div class="flex-col max-w-10/10" id="container-head">
 
-    <div id="header" class="flex-col items-end">
+    <div id="header" class="flex-col items-center">
         <!-- Top bar -->
             <div class="header">
                 <ul class="flex justify-end">
@@ -12,35 +12,38 @@
                     </li>
                     <li><a href="/about">About us!</a></li>
                 </ul>
-    </div>
+            </div>
 
-            <div class="flex flex-row menu-header items-stretch">
+            <div class="flex-col items-center">
+                <div class="flex flex-row menu-header items-stretch">
 
-                    <!-- Tiêu đề logo -->
-                    <a href="/" class="p-4">
-                            <img alt="/" src="/good.png" width="200px" >
-                    </a>
+                        <!-- Tiêu đề logo -->
+                        <a href="/" class="p-4">
+                                <img alt="/" src="/good.png" width="200px" >
+                        </a>
 
 
-                    <!-- menu-header -->
-                    <div id="div-search" class="flex items-center justify-end">
-                        <!-- Thanh tìm kiếm -->
-                        <input class="rounded-xl" id="MenuSearch" type="text" placeholder="Tìm ấn phẩm"> 
-                    </div>
-                        
-                        <div class="content-center flex items-stretch">
-                        <card class="flex items-center">
-                            Bảo mật thông tin an toàn
-                        </card>
-                        <card class="flex items-center">
-                            Đảm bảo 100% hài lòng
-                        </card>
+                        <!-- menu-header -->
+                        <div id="div-search" class="flex items-center justify-end">
+                            <!-- Thanh tìm kiếm -->
+                            <input class="rounded-xl" id="MenuSearch" type="text" placeholder="Tìm ấn phẩm"> 
                         </div>
-            </div> 
+                            
+                            <div class="content-center flex items-stretch">
+                            <card class="flex items-center">
+                                Bảo mật thông tin an toàn
+                            </card>
+                            <card class="flex items-center">
+                                Đảm bảo 100% hài lòng
+                            </card>
+                            </div>
+                </div> 
+            </div>
     </div>
 
     <!-- Main Menu -->
-            <div id="Menu" class="items-start bg-cyan-500 shadow-lg shadow-cyan-500/50">
+     <div class="flex flex-col items-center">
+            <div id="Menu" class="items-center bg-cyan-500 shadow-lg shadow-cyan-500/50">
                 <ul class="flex items-start">
                     <li id="Menu-items"><a href="/">Trang chủ</a></li>
                     <ul id="Menu-items" class="drophover">
@@ -127,6 +130,7 @@
                     <li id="Menu-items"><a href="#">In nhanh</a></li>
                 </ul>
             </div> 
+            </div>
 
 </div>
 
@@ -198,13 +202,14 @@
     .header {
         background-color: #11060c;
         padding: 15px;
-        width: 100%;
+        width: 1440px;
+        max-width: 100%;
         color: aliceblue;
     }
     .menu-header {
         background-color: #f191a6;
         width: 1440px;
-        max-width: fit-content;
+        min-width: fit-content;
     }
     /*Strip the ul of padding and list styling*/
     ul {

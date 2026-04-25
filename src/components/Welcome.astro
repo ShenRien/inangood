@@ -4,10 +4,12 @@ import background from '../assets/background.svg';
 import introbackground from '../assets/intro/advicesbackground.png';
 
 import Material from '../components/Material.astro';
+import Materialsec from '../components/MaterialSec.astro';
+import Slide from '../components/Slide.astro'
 // Lucide icons
 import { CircleCheckBig, Layers, ClockCheck } from '@lucide/astro';
 import { Printer } from '@lucide/astro';
-
+import MaterialSec from '../components/MaterialSec.astro';
 ---
 
 <div class="flex flex-col" id="container">
@@ -52,6 +54,11 @@ import { Printer } from '@lucide/astro';
 	</main>
 	
 	<Material />
+	<div class="block m-5" />
+	<MaterialSec />
+	<div class="block m-5" />
+	<Slide />
+	<div class="block m-5" />
 	<!--
 		<a href="https://astro.build/blog/astro-6-beta/" id="news" class="box">
 		<p>Phần class box có thể dùng Chat hỗ trợ!</p>
