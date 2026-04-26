@@ -6,29 +6,29 @@ import { Zap, Tags, BaggageClaim, FastForward, Brush, TruckElectric } from '@luc
         <p><Zap size={45} class="inline-block" /> Lý do khách chọn xưởng</p>
     </div>
     <div class="pt-9" >
-    <div id="backdrop" class="border-3 grid grid-cols-5">
-        <div class="text-center pr-2 col- items-start span-1 border-r place-content-top">
+    <div id="backdrop" class="border-3 grid grid-cols-5 divide-x-1 divide-solid">
+        <div class="text-center pr-2 col- items-start span-1 place-content-top">
             <div class="m-1 p-2">
             <Tags size={45} class="inline-block" />
             <h1>GIÁ TẬN GỐC</h1>
             <p>Không qua trung gian</p>
             </div>
         </div>
-        <div class="text-center pr-2 pl-2 items-start col-span-1 border-r place-content-top">
+        <div class="text-center pr-2 pl-2 items-start col-span-1 place-content-top">
             <div class="m-1 p-2">
             <BaggageClaim size={45} class="inline-block" />
             <h1>NHẬN SỐ LƯỢNG ÍT</h1>
             <p>Linh hoạt</p>
             </div>
         </div>
-        <div class="text-center pr-2 pl-2 items-start col-span-1 border-r place-content-top">
+        <div class="text-center pr-2 pl-2 items-start col-span-1 place-content-top">
             <div class="m-1 p-2">
             <FastForward size={45} class="inline-block" />
             <h1>IN NHANH</h1>
             <p>Có hàng trong ngày</p>
             </div>
         </div>
-        <div class="text-center pr-2 pl-2 items-start col-span-1 border-r place-content-top">
+        <div class="text-center pr-2 pl-2 items-start col-span-1 place-content-top">
             <div class="m-1 p-2">
             <Brush size={45} class="inline-block" />
             <h1>MIỄN PHÍ THIẾT KẾ</h1>
@@ -66,16 +66,22 @@ import { Zap, Tags, BaggageClaim, FastForward, Brush, TruckElectric } from '@luc
     }
     #backdrop div div {
         border-radius: 10px;
-        transition: .35s;
+        transition: transform .35s;
         height: 100%;
     }
     #backdrop div:hover div {
         border-radius: 15px;
         background-color: rgb(255, 255, 255);
     }
-    #backdrop div:hover div h1 {
-        font-size: 1.2rem;
-        font-weight: 600;
+    #backdrop div div h1 {
+    transition: transform .35s;
+    }
+    #backdrop div div:hover h1 {
+        -ms-transform: scale(4.6);
+            /* IE 9 */
+            -webkit-transform: scale(1.5);
+            /* Safari 3-8 */
+            transform: scale(1.5);
     }
     #title-red p {
         font-size: 1.5rem !important;

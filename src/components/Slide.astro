@@ -1,5 +1,23 @@
 ---
+
+// Cấu hình Splide  -  yêu cầu npm install astro-splide @splidejs/splide-extension-auto-scroll
+import "@splidejs/splide/css"
+import { SplideExtension, SplideSlide } from 'astro-splide';
+import type { Options } from '@splidejs/splide';
+
 import { slide } from 'astro:transitions';
+
+const option: Options = {
+    type: 'loop',
+    drag: 'free',
+    focus: 'center',
+    perPage: 8,
+    autoScroll: {
+        speed: 3,
+    },
+}
+
+import slideImgs from '../assets/slide/*.png'
 
 import Slide1 from '../assets/slide/25.png'
 import Slide2 from '../assets/slide/26.png'
@@ -18,6 +36,7 @@ import Slide14 from '../assets/slide/38.png'
 
 ---
 
+<!--
 <div transition:animate={slide({ duration: '0.4s' })} class="Slider grid grid-cols-7 gap-2 items-center" >
     <img src={Slide1.src} class="col-span-1" />
     <img src={Slide2.src} class="col-span-1" />
@@ -34,15 +53,68 @@ import Slide14 from '../assets/slide/38.png'
     <img src={Slide13.src} class="col-span-1" />
     <img src={Slide14.src} class="col-span-1" />
 </div>
-
+-->
+<div class="content">
+<SplideExtension
+  options={option}
+>
+      <SplideSlide>
+        <img src={Slide1.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide3.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide4.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide5.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide6.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide7.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide8.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide9.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide10.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide11.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide12.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide13.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide14.src} />
+      </SplideSlide>
+</SplideExtension>
+</div>
 <style>
-    .Slider {
-        width: 1440px;
-        max-width: 100%;
-        padding: 5pt;
-    }
-    .Slider img {
+  #content {
+    width: 1440px;
+    max-width: 100%;
+  }
+    img {
+        padding: 3px;
         width: auto;
-        border-radius: 15px;
+        height: auto;
+        border-radius: 10px;
     }
 </style>
+
+
+<script>
+  import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+  import { initSplideExtension } from "astro-splide/js/splideExtensionUtils"
+  initSplideExtension({AutoScroll})
+</script>

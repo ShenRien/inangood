@@ -11,8 +11,8 @@ import Mater5 from '../assets/matersec/5.png';
         <p><Zap size={45} class="inline-block" /> IN ẤN THEO YÊU CẦU ĐA DẠNG CÁC SẢN PHẨM</p>
     </div>
     <div class="pt-9" >
-    <div id="backdrop" class="border-3 grid grid-cols-5">
-        <div class="text-center pr-2 col- items-start span-1 border-r place-content-top">
+    <div id="backdrop" class="border-3 grid grid-cols-5 divide-x-1 divide-solid">
+        <div class="text-center pr-2 col- items-start span-1 place-content-top">
             <div class="m-1 p-2">
             <Tags size={45} class="inline-block" />
             <h1>HÓA ĐƠN</h1>
@@ -20,7 +20,7 @@ import Mater5 from '../assets/matersec/5.png';
             <img src={Mater1.src} class="inline-block" />
             </div>
         </div>
-        <div class="text-center pr-2 pl-2 items-start col-span-1 border-r place-content-top">
+        <div class="text-center pr-2 pl-2 items-start col-span-1 place-content-top">
             <div class="m-1 p-2">
             <BaggageClaim size={45} class="inline-block" />
             <h1>TEM NHÃN</h1>
@@ -28,7 +28,7 @@ import Mater5 from '../assets/matersec/5.png';
             <img src={Mater2.src} class="inline-block" />
             </div>
         </div>
-        <div class="text-center pr-2 pl-2 items-start col-span-1 border-r place-content-top">
+        <div class="text-center pr-2 pl-2 items-start col-span-1 place-content-top">
             <div class="m-1 p-2">
             <FastForward size={45} class="inline-block" />
             <h1>BAO BÌ</h1>
@@ -36,7 +36,7 @@ import Mater5 from '../assets/matersec/5.png';
             <img src={Mater3.src} class="inline-block" />
             </div>
         </div>
-        <div class="text-center pr-2 pl-2 items-start col-span-1 border-r place-content-top">
+        <div class="text-center pr-2 pl-2 items-start col-span-1 place-content-top">
             <div class="m-1 p-2">
             <Brush size={45} class="inline-block" />
             <h1>THIẾT KẾ</h1>
@@ -85,8 +85,14 @@ import Mater5 from '../assets/matersec/5.png';
         background-color: rgb(255, 255, 255);
     }
     #backdrop div:hover div h1 {
-        font-size: 1.2rem;
-        font-weight: 600;
+        transition: transform .35s;
+    }
+    #backdrop div:hover div h1 {
+        -ms-transform: scale(4.6);
+            /* IE 9 */
+            -webkit-transform: scale(1.5);
+            /* Safari 3-8 */
+            transform: scale(1.5);
     }
     #title-red p {
         font-size: 1.5rem !important;
