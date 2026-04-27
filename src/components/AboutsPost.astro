@@ -6,8 +6,8 @@ import * as aboutPost from "../articles/about.md";
 import Content from "../articles/about.md";
 
 ---
-
-<div class="flex-col text-2xl p-8 justify-center place-content-center" id="container">
+<main class="flex flex-col items-center w-full" >
+<div class="flex-col text-2xl p-8 items-center place-content-center my-5" id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 			<h1 >{aboutPost.frontmatter.title}</h1>
@@ -23,7 +23,7 @@ import Content from "../articles/about.md";
 	-->
 	
 </div>
-
+</main>
 <style>
 	* {
 		font-size: 55;
@@ -40,16 +40,13 @@ import Content from "../articles/about.md";
 	#container {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
-		align-items: center;
-		margin-top: 5vh;
+		margin-top: 1vh;
 		width: 1440px;
 		max-width: 100%;
 	}
 
 	main {
 		height: auto;
-		justify-content: center;
-		max-width: 1440px;
 	}
 
 	h1 {

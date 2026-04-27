@@ -1,23 +1,24 @@
 ---
-
+import Menu from "./Menu.astro"
 ---
 <div class="flex-col max-w-10/10" id="container-head">
 
     <div id="header" class="flex-col items-center">
         <!-- Top bar -->
             <div class="header">
-                <ul class="flex justify-end">
-                    <li>
-                        Liên hệ: 0706 371 048 – 0847 547 776 – 0901 036 457
+                <ul class="flex justify-end place-items-center">
+                    <li class="block items-center justify-center pr-5">
+                        Hotline KD: <div id="link-social" class="inline-block"><a href="https://zalo.me/0706371048" target="_blank">0706 371 048</a></div> – <div id="link-social" class="inline-block"><a target="_blank" href="https://zalo.me/0847547776">0847 547 776</a></div> – <div id="link-social" class="inline-block"><a target="_blank" href="https://zalo.me/0901036457">0901 036 457</a></div>
+                        | CSKH: <div id="link-social" class="inline-block"><a target="_blank" href="https://zalo.me/0907335245"></a>0907 335 245</a></div>
                     </li>
-                    <li><a href="/about">About us!</a></li>
+                    <li class="block items-center justify-center px-5 bg-linear-95 from-red-400 to-red-200 rounded-2xl border-1 border-solid border-orange-200 w-fit float-left flex flex-row"><a href="/about" class="text-xl my-1 mx-2">Về chúng tôi (GOOD)!</a></li>
                 </ul>
             </div>
 
-                <div class="menu-header grid grid-cols-7 place-items-center">
+                <div class="bg-[#78172220] menu-header grid grid-cols-7 place-items-center">
 
                         <!-- Tiêu đề logo -->
-                        <a class="p-4 col-span-1">
+                        <a href="/" class="p-4 col-span-1">
                                 <img src="/good.png" width="200px" >
                         </a>
 
@@ -38,96 +39,7 @@
                 </div> 
     </div>
 
-    <!-- Main Menu -->
-     <div class="flex flex-col items-center">
-            <div id="Menu" class="items-center bg-cyan-500 shadow-lg shadow-cyan-500/50">
-                <ul class="flex items-start">
-                    <li id="Menu-items"><a href="/">Trang chủ</a></li>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="/products">In bao bì - túi giấy</a>
-                        <ul class="dropdown">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TÚI GIẤY KRAFT IN THEO YÊU CẦU</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TÚI GIẤY KRAFT CÓ SẴN</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">COMBO HỘP TÚI THEO CHỦ ĐỀ</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TÚI GIẤY CAO CẤP C250</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">In bao bì - túi</a>
-                        <ul class="dropdown">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">BỌC NILON</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">BỌC ÉP QUAI</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TÚI NIÊM PHONG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">BỌC TỰ HỦY</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">Ấn phẩm</a>
-                        <ul class="dropdown flex min-w-[240px] flex-col gap-1 p-1.5">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">HÓA ĐƠN</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">DANH THIẾP</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">VOUCHER</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TAG TRE0</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TỜI RƠI</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">PHIẾU SHIP HÀNG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">BẢNG GIÁ</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">BẰNG - HỢP ĐỒNG</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">Sổ</a>
-                        <ul class="dropdown flex min-w-[240px] flex-col gap-1 p-1.5">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ BIÊN NHẬN</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ HỤI</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ BÁN HÀNG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ THU CHI</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ NHẬP XUẤT HÀNG HÓA</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ VAY TIỀN</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THEO DÕI KHÁCH HÀNG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ CHẤM CÔNG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ THU TIỀN TRỌ</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ HỢP ĐỒNG CƯỚI</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">SỔ LIỆU TRÌNH SPA</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">Menu thực đơn</a>
-                        <ul class="dropdown flex min-w-[240px] flex-col gap-1 p-1.5">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">MENU TỜ</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">MENU DECAL CHỐNG THẤM NƯỚC</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">MENU ĐÓNG CUỐN - QUYỂN</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">Thiệp</a>
-                        <ul class="dropdown flex min-w-[240px] flex-col gap-1 p-1.5">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIỆP SINH NHẬT</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIỆP THÔI NÔI</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIỆP TÂN GIA</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIỆP CƯỚI</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">Decal</a>
-                        <ul class="dropdown flex min-w-[240px] flex-col gap-1 p-1.5">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TEM DECAL BÓNG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TEM VỠ BẢO HÀNH</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">TEM BẾ HÌNH THEO YÊU CẦU</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIỆP CƯỚI</li>
-                        </ul>
-                    </ul>
-                    <ul id="Menu-items" class="drophover">
-                        <a href="#">Ấn phẩm khác</a>
-                        <ul class="dropdown flex min-w-[240px] flex-col gap-1 p-1.5">
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIẾT KẾ LOGO RIÊNG</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIẾT KẾ BẢNG HIỆU</li>
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">THIẾT KẾ CON DẤU</li>
-                        </ul>
-                    </ul>
-                    <li id="Menu-items"><a href="#">In nhanh</a></li>
-                </ul>
-            </div> 
-            </div>
+    <Menu />
 
 </div>
 
@@ -136,40 +48,6 @@
     #div-search {
         margin-left: 15px;
         margin-right: 15px;
-    }
-    #Menu-items {
-        padding: 6pt;
-        
-    }
-    #Menu {
-        width: 1440px;
-        max-width: 100%;
-        margin-top: 10px;
-        background-color: rgb(0, 225, 255);
-        border-radius: 5px;
-    }
-    .drophover {
-        display: inline-block;
-        float: left;
-        overflow: auto;
-    }
-    .dropdown {
-        display: none;
-        z-index: 999;
-    }
-    .drophover:hover {
-        background-color: aquamarine;
-    }
-    .drophover:hover .dropdown{
-        margin-top: 8pt;
-        margin-left: -8pt;
-        display: block;
-        overflow: auto;
-        position: absolute;
-        max-width: 350px;
-        background-color: aliceblue;
-        padding: 15px;
-        border-radius: 5px;
     }
     card {
         width: 125px;
@@ -197,13 +75,12 @@
     }
     .header {
         background-color: #11060c;
-        padding: 15px;
+        padding: 5px;
         width: 1440px;
         max-width: 100%;
         color: aliceblue;
     }
     .menu-header {
-        background-color: #f191a6;
         width: 1440px;
         max-width: 100%;
     }
@@ -219,14 +96,29 @@
         padding-right: 5px;
         float: left;
         margin-right: 1px;
-        font-size: 1.3rem;
-        
+        font-size: 1.rem;
+        height: 100%;
     }
-    #Menu-items a {
-            font-size: 1.2rem;
-        }
+    ul li {
+        height: 100%;
+    }
     #container-head {
 		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		align-items: center;
 	}
+    #link-social {
+        transition: all .55s;
+    }
+    #link-social:hover {
+        -ms-transform: scale(3.45);
+            /* IE 9 */
+        -webkit-transform: scale(1.125);
+            /* Safari 3-8 */
+        transform: scale(1.125);
+        cursor: pointer;
+        color: #781722;
+        background-color: #dfb4b9;
+        padding: 3pt;
+        border-radius: 8px;
+    }
 </style>
