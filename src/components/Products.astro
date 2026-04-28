@@ -4,6 +4,7 @@ import background from '../assets/background.svg';
 
 import * as aboutPost from "../articles/products/tuikraft.md";
 import Content from "../articles/products/tuikraft.md";
+import CustomImg from './CustomImg.astro';
 
 import Slide9 from '../assets/slide/33.png'
 // const products = Object.values(import.meta.glob('./articles/products/*.md', {eager: true }));
@@ -47,11 +48,11 @@ const products = Object.values(matches);
 		</div>		
 	</div>
 
-	<div id="description" class="border-solid border-1 rounded-xl border-sky-100 p-5">
+	<div id="description" class="text-center leading-[3rem] border-solid border-1 rounded-xl border-sky-100 p-5">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	
     <div id="desdate"><p>"Cập nhật ngày:" {aboutPost.frontmatter.date}</p></div>
-	<Content />
+	<Content components={{ img: CustomImg }} />
 	</div>
 	<p>Relate posts:</p>
 	<ul>
@@ -163,6 +164,13 @@ const products = Object.values(matches);
 		line-height: 24px;
 		letter-spacing: -0.006em;
 		margin: 0;
+		text-align: center;
+	}
+
+	img {
+		display: flex;
+		margin: 3rem;
+		justify-self: center;
 	}
 
 	code {

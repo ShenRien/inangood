@@ -1,25 +1,31 @@
 ---
-import Slide7 from '../assets/slide/31.png'
-import Slide8 from '../assets/slide/32.png'
-import Slide9 from '../assets/slide/33.png'
-import Slide10 from '../assets/slide/34.png'
+import video from '../assets/banner/video.mp4'
+import Banner1 from '../assets/banner/1.jpg'
+import Banner2 from '../assets/banner/2.jpg'
+import Banner3 from '../assets/banner/3.jpg'
+import Banner4 from '../assets/banner/4.jpg'
 ---
 
 <div id="flash-container" class="flex flex-col items-center">
  <div id="flash-body" class="grid grid-cols-7 gap-2">
     <div id="flash-image" class="col-span-4">
-        <img src={Slide7.src}  class="aspect-3/2 w-full h-auto object-cover rounded-2" />
+        <video class="aspect-3/2 w-full h-auto object-cover rounded-2" height="" controls>
+        <source src={video} type="video/mp4">
+    </video>
     </div>
-    <div id="flash-sub" class="border-2 col-span-3 grid grid-cols-2 gap-2">
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Slide8.src} class="aspect-6/5 w-full h-auto col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Slide9.src} class="aspect-6/5 w-full h-auto col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Slide10.src} class="aspect-6/5 w-full h-auto col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Slide10.src} class="aspect-6/5 w-full h-auto col-span-4 object-cover rounded-1" /></div>
+    <div id="flash-sub" class="border-2 col-span-3 grid grid-cols-2 ">
+        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner1.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner2.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner3.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner4.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
     </div>
  </div>
 </div>
 
 <style>
+    video {
+        object-fit:contain;
+    }
     #flash-container {
         width: 100%;
         padding-top: 10px;
@@ -53,12 +59,15 @@ import Slide10 from '../assets/slide/34.png'
             /* Safari 3-8 */
         transform: scale(1.14);
         cursor: pointer;
+        z-index: 10;
+        box-shadow:  5px 10px 1rem #88888830;
     }
     #flash-image {
         overflow: hidden;
     }
     #flash-image img {
-        transition: all .55s;
+        transition: transform .55s;
+        z-index: -99;
     }
     #flash-image:hover img {
         -ms-transform: scale(3);
@@ -67,6 +76,7 @@ import Slide10 from '../assets/slide/34.png'
             /* Safari 3-8 */
         transform: scale(1.1);
         cursor: pointer;
+        z-index: 10;
     }
     img {
         border-radius: 8px;

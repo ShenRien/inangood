@@ -1,11 +1,14 @@
 ---
 title: Túi giấy kraft
-catergory: túi giấy
 tags:
   - tuigiay
   - kraft
-date: 2026-04-22
+  - Túi
+  - Giấy
+date: 2026-04-28T00:00:00
 image: ../tui-giay-kraft/z6973093850895_9706e1071c04dd86b0c4e8f7292f2283.jpg
+catergory: Túi Kraft
+parent: Túi giấy Kraft
 ---
 
 # *Túi Giấy Kraft – Giải Pháp Bao Bì Xanh, Tinh Tế & Đẳng Cấp*

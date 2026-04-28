@@ -1,5 +1,7 @@
 ---
 import Menu from "./Menu.astro"
+import "../styles/global.css"
+import MenuDynamics from "./MenuDynamics.astro"
 ---
 <div class="flex-col max-w-10/10" id="container-head">
 
@@ -11,7 +13,7 @@ import Menu from "./Menu.astro"
                         Hotline KD: <div id="link-social" class="inline-block"><a href="https://zalo.me/0706371048" target="_blank">0706 371 048</a></div> – <div id="link-social" class="inline-block"><a target="_blank" href="https://zalo.me/0847547776">0847 547 776</a></div> – <div id="link-social" class="inline-block"><a target="_blank" href="https://zalo.me/0901036457">0901 036 457</a></div>
                         | CSKH: <div id="link-social" class="inline-block"><a target="_blank" href="https://zalo.me/0907335245"></a>0907 335 245</a></div>
                     </li>
-                    <li class="block items-center justify-center px-5 bg-linear-95 from-red-400 to-red-200 rounded-2xl border-1 border-solid border-orange-200 w-fit float-left flex flex-row"><a href="/about" class="text-xl my-1 mx-2">Về chúng tôi (GOOD)!</a></li>
+                    <li id="abbutton" class="block items-center justify-center px-5 bg-linear-95 from-red-400 to-red-200 rounded-2xl border-1 border-solid  w-fit float-left flex flex-row"><a href="/about" class="text-xl my-1 mx-2">Về chúng tôi (GOOD)!</a></li>
                 </ul>
             </div>
 
@@ -38,7 +40,7 @@ import Menu from "./Menu.astro"
                         </div>
                 </div> 
     </div>
-
+    <MenuDynamics />
     <Menu />
 
 </div>
