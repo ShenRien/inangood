@@ -1,41 +1,41 @@
 ---
 // Dùng getCollection được define tại product.config.ts
-import { getCollection } from "astro:content";
+import { getCollection, render } from 'astro:content';
 import { Debug } from "astro:components";
-
+import { url } from "astro:schema";
+import '../products.config';
+// Get all data 'src/articles/products/' entries
+const ProductsCol = await getCollection('blogCollection');
+//const slide = await getCollection('slide');
 const matches = import.meta.glob('../articles/products/*.md', { eager: true });
 const products = Object.values(matches);
 
-
-// Get all data 'src/articles/products/' entries
-const allProducts = await getCollection('Products');
-
 ---
-
-<!--
+<Debug {ProductsCol} />
 <ul>
-		{allProducts.map((product) => 
+		{ProductsCol.map((product) => 
 		<li>
-			<Debug {product} />
+			<Debug {product.data} />
 			<a href={product.permalink} target='_blank'>
 				{product.title}
 			</a>
 		</li>)}
-</ul> -->
-<!-- Main Menu -->
-    <Debug {products} />
+</ul>
+<!-- Main Menu <Debug {products} />-->
+    
      <div class="flex flex-col items-center">
 
             <div id="Menu" class="items-center shadow-xl">
 
+                
 				<ul class="flex items-start flex-wrap">
                     {products.map((product) =>
 
                         
                     <li id="Menu-items">
-                        <a href={`/${product.url}`} target='_blank'>
+                        <a href={`/${product.id}/`} target='_blank'>
                             {product.frontmatter.title}
-                            class = ${{product.frontmatter.parent} ? {product.frontmatter.parent} : ""}
+                            class = `{product.frontmatter.parent ? product.frontmatter.parent : ""}`
                         </a>
                     </li>
 
