@@ -1,0 +1,13 @@
+---
+title: Túi Giấy Kraft
+tags:
+  - Túi
+  - Giấy
+  - kraft
+  - In
+date: 2026-04-28T00:00:00
+image:
+catergory: Túi giấy Kraft
+parent: none
+---
+# Tổng hợp các mục in túi giấy kraft trong caterogy

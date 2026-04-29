@@ -15,9 +15,9 @@ import Banner4 from '../assets/banner/4.jpg'
     </div>
     <div id="flash-sub" class="border-2 col-span-3 grid grid-cols-2 ">
         <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner1.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner4.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
         <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner2.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
         <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner3.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner4.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
     </div>
  </div>
 </div>
@@ -28,8 +28,8 @@ import Banner4 from '../assets/banner/4.jpg'
     }
     #flash-container {
         width: 100%;
-        padding-top: 10px;
-        padding-bottom: 20px;
+        padding-top: 0.8rem;
+        padding-bottom: 1.5rem;
     }
     #flash-body {
         width: 1440px;
@@ -53,11 +53,11 @@ import Banner4 from '../assets/banner/4.jpg'
         transition: transform .35s;
     }
     #second-img:hover {
-        -ms-transform: scale(3.5);
+        -ms-transform: scale(2.8);
             /* IE 9 */
-        -webkit-transform: scale(1.14);
+        -webkit-transform: scale(1.06);
             /* Safari 3-8 */
-        transform: scale(1.14);
+        transform: scale(1.06);
         cursor: pointer;
         z-index: 10;
         box-shadow:  5px 10px 1rem #88888830;

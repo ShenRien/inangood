@@ -1,31 +1,30 @@
 ---
+import { getCollection } from "astro:content";
+import { Debug } from "astro:components";
+import MenuDynamix from "./MenuDynamics.astro";
+const ProductsCol = await getCollection('blogCollection');
 ---
-<div id="cater-container" class="flex flex-col items-center">
+<div id="cater-container" class="flex justify-center">
     <!-- Về sau thay này thành category của từng mục sản phẩm -->
-    <ul id="catergory" class="grid grid-cols-9 p-2 gap-1">
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-        <li class="col-span-1"><a>Danh mục 1</a></li>
-    </ul>
+<div id="catergory">
+         {ProductsCol.map((product) => 
+                <ul class="inline-block flex-wrap flex" >
+                {product.data.tags.map((tag) =>
+                    <li class=" m-1 flex flex-col inline-block flex-wrap">
+                        <a href={`/products/${product.id}`}>
+                            {tag}
+                        </a>
+                    </li>
+                )}
+               </ul> 
+            )
+        }
+</div>   
 </div>
+
 <style>
     #cater-container {
-
+        padding-bottom: 1.5rem;
     }
     #catergory {
         width: 1440px;
@@ -34,8 +33,7 @@
     li {
         text-align: center;
         background-color: brown;
-        padding: 0.8rem:
-        transition: .35s;
+        transition: all .35s;
         color: #fff;
         font-size: 1.5rem !important;
     }

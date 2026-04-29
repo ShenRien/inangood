@@ -3,24 +3,14 @@
 import { getCollection, render } from 'astro:content';
 import { Debug } from "astro:components";
 import { url } from "astro:schema";
-import '../products.config';
 // Get all data 'src/articles/products/' entries
 const ProductsCol = await getCollection('blogCollection');
 //const slide = await getCollection('slide');
-const matches = import.meta.glob('../articles/products/*.md', { eager: true });
-const products = Object.values(matches);
+//const matches = import.meta.glob('../articles/products/*.md', { eager: true });
+//const products = Object.values(matches);
 
 ---
-<Debug {ProductsCol} />
-<ul>
-		{ProductsCol.map((product) => 
-		<li>
-			<Debug {product.data} />
-			<a href={product.permalink} target='_blank'>
-				{product.title}
-			</a>
-		</li>)}
-</ul>
+
 <!-- Main Menu <Debug {products} />-->
     
      <div class="flex flex-col items-center">
@@ -28,22 +18,6 @@ const products = Object.values(matches);
             <div id="Menu" class="items-center shadow-xl">
 
                 
-				<ul class="flex items-start flex-wrap">
-                    {products.map((product) =>
-
-                        
-                    <li id="Menu-items">
-                        <a href={`/${product.id}/`} target='_blank'>
-                            {product.frontmatter.title}
-                            class = `{product.frontmatter.parent ? product.frontmatter.parent : ""}`
-                        </a>
-                    </li>
-
-                    )}
-                </ul>
-
-
-
                 <ul class="flex items-start flex-wrap">
 					<!-- Trang chủ -->
                     <li id="Menu-items">
@@ -51,28 +25,25 @@ const products = Object.values(matches);
 							Trang chủ (Dynamics)
 						</a>
 					</li>
-					<!-- có parent  -->
-                    <ul id="Menu-items" class="drophover">
-                        <a href="/products">
-							Túi giấy Kraft
-						</a>
-                        <ul class="dropdown">
-
-                            <li class="flex min-w-[240px] flex-col gap-1 p-1.5">
-								<a href="">
-									TÚI GIẤY KRAFT IN THEO YÊU CẦU
-								</a>
-							</li>
-
-                        </ul>
-                    </ul>
-					<!-- Không có parent -->
-                    <li id="Menu-items">
-						<a href="/products">
-							In nhanh
-						</a>
-					</li>
-
+                            {ProductsCol.filter(product => product.data.parent === 'none').map((product) => 
+                                <ul id="Menu-items" class="drophover">
+                                <a href={`/products/${product.id}`}>
+                                    {product.data.title}
+                                </a>
+                                <ul class="bg-sky-500 drop">
+                                    {ProductsCol.filter(productsub => productsub.data.parent === product.data.catergory ).map(
+                                        productsub => 
+                                        <li class="flex min-w-[240px] flex-col gap-1 p-1.5">
+                                            <a href={`/products/${productsub.id}`}>
+                                                {productsub.data.title}
+                                            </a>
+                                        </li>
+                                    )}
+                                </ul>
+                                </ul>
+                            )
+                            }
+                    
                 </ul>
 
             </div> 
@@ -101,7 +72,7 @@ const products = Object.values(matches);
         overflow: auto;
         cursursor: pointer;
     }
-    .dropdown {
+    .drop {
         display: none;
         z-index: 999;
         cursursor: pointer;
@@ -112,7 +83,7 @@ const products = Object.values(matches);
         cursursor: pointer;
     }
     
-    .drophover:hover .dropdown{
+    .drophover:hover .drop{
         margin-top: 7pt;
         margin-left: -7pt;
         display: block;
