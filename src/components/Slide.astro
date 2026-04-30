@@ -5,8 +5,7 @@
 import "@splidejs/splide/css"
 import { SplideExtension, SplideSlide } from 'astro-splide';
 import type { Options } from '@splidejs/splide';
-
-import { slide } from 'astro:transitions';
+import { Debug } from "astro:components";
 
 const option: Options = {
     type: 'loop',
@@ -18,7 +17,15 @@ const option: Options = {
     },
 }
 
-import slideImgs from '../assets/slide/*.png'
+const optionMobile: Options = {
+    type: 'loop',
+    drag: 'free',
+    focus: 'center',
+    perPage: 4,
+    autoScroll: {
+        speed: 1,
+    },
+}
 
 import Slide1 from '../assets/slide/25.png'
 import Slide2 from '../assets/slide/26.png'
@@ -34,7 +41,9 @@ import Slide11 from '../assets/slide/35.png'
 import Slide12 from '../assets/slide/36.png'
 import Slide13 from '../assets/slide/37.png'
 import Slide14 from '../assets/slide/38.png'
+// import { getCollection } from "astro:content";
 
+// const slideCollections = await getCollection('slideCollection');
 ---
 
 <!--
@@ -55,7 +64,7 @@ import Slide14 from '../assets/slide/38.png'
     <img src={Slide14.src} class="col-span-1" />
 </div>
 -->
-<div class="content">
+<div id="slideCom" class="content">
 <SplideExtension
   options={option}
 >
@@ -100,7 +109,58 @@ import Slide14 from '../assets/slide/38.png'
       </SplideSlide>
 </SplideExtension>
 </div>
+<div id="slideMobile" class="content">
+<SplideExtension
+  options={optionMobile}
+>
+      <SplideSlide>
+        <img src={Slide1.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide3.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide4.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide5.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide6.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide7.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide8.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide9.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide10.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide11.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide12.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide13.src} />
+      </SplideSlide>
+      <SplideSlide>
+        <img src={Slide14.src} />
+      </SplideSlide>
+</SplideExtension>
+</div>
 <style>
+  #slideMobile {
+    display: none;
+  }
+  #slideCom {
+    display: contents;
+  }
   .content {
     width: 1440px;
     max-width: 100%;
@@ -110,6 +170,14 @@ import Slide14 from '../assets/slide/38.png'
         width: auto;
         height: auto;
         border-radius: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      #slideCom {
+        display: none;
+      }
+      #slideMobile {
+        display: contents;
+      }
     }
 </style>
 

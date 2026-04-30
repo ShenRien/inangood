@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
-import ProductArticles from '../../layouts/ProductsA.astro';
+import ProductArticles from '../../layouts/ProductsArticles.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blogCollection');
@@ -15,5 +15,12 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 <ProductArticles {...post.data}>
-	<Content />
+	<Content class="contentclass" />
 </ProductArticles>
+
+<style>
+	p {
+		color: aquamarine;
+		background-color: aqua !important;
+	}
+</style>

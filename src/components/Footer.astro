@@ -9,7 +9,7 @@ import ImgThu from '../assets/salers/thu.png';
 <div class="flex flex-col" id="container-footer">
     <!-- Top bar -->
     <div class="bg-sky-50 w-[1440px] max-w-full grid grid-cols-2">
-        <div class="bg-[#781722] col-span-2 pt-4 pl-4">
+        <div id="firstelement" class="bg-[#781722] col-span-2 pt-4 pl-4">
             <div id="ibnow" class="block items-center justify-center p-3 bg-linear-95 from-red-800 to-red-600 m-3 rounded-2xl border-2 border-solid border-orange-200 w-fit float-left flex flex-row">
 
                 <BaggageClaim class="inline-block h-auto text-white" size={52} />
@@ -20,7 +20,7 @@ import ImgThu from '../assets/salers/thu.png';
 
             </div>
 
-            <ul class="flex flex-row flex-wrap justify-center h-[100%] hotline">
+            <ul id="hotline" class="flex flex-row flex-wrap justify-center h-[100%] hotline">
                 <li class="min-w-auto flex-row flex items-center">
                     <img src={ImgCTam.src} class="h-20 rounded-[60px] bg-orange-100 ml-3 my-2">
 
@@ -144,5 +144,18 @@ import ImgThu from '../assets/salers/thu.png';
         -webkit-transform: scale(1.5);
             /* Safari 3-8 */
         transform: scale(1.5);
+    }
+
+    @media screen and (max-width: 600px) {
+        #firstelement {
+            display: flex !important;
+            flex-direction: column !important;
+        }   
+        #ibnow {
+
+        }
+        #hotline {
+
+        }     
     }
 </style>
