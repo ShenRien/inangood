@@ -33,7 +33,6 @@ interface PropsImg {
 //const products = Object.values(import.meta.glob(, {eager: true }));
 const images = import.meta.glob<{ default: ImageMetadata }>(`./articles/products/{id}/*.png`)
 
-console.log(images.metadata)
 ---
 <Layout>
     <head>
