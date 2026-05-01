@@ -5,12 +5,35 @@ import BaseHead from '../components/Header.astro'
 import background from '../assets/background.svg';
 import type { CollectionEntry } from "astro:content";
 import Slide9 from '../assets/slide/33.png';
-//import { getEntry, render } from 'astro:content';
-// const products = Object.values(import.meta.glob('./articles/products/*.md', {eager: true }));
+import "@splidejs/splide/css"
+import { SplideExtension, SplideSlide } from 'astro-splide';
+import type { Options } from '@splidejs/splide';
+import { Debug } from "astro:components";
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 
 type Props = CollectionEntry<"blogCollection">["data"];
-const { title, date, catergory, parent } = Astro.props;
+const { title, date, catergory, parent, id } = Astro.props;
 
+const option: Options = {
+    type: 'loop',
+    drag: 'free',
+    focus: 'center',
+    perPage: 1,
+}
+
+interface PropsImg {
+   imagePath: string;
+   altText: string;
+   name: string;
+   age: number;
+}
+
+//import { getEntry, render } from 'astro:content';
+//const products = Object.values(import.meta.glob(, {eager: true }));
+const images = import.meta.glob<{ default: ImageMetadata }>(`./articles/products/{id}/*.png`)
+
+console.log(images.metadata)
 ---
 <Layout>
     <head>

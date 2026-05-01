@@ -3,6 +3,7 @@
 import { getCollection, render } from 'astro:content';
 import { Debug } from "astro:components";
 import { url } from "astro:schema";
+import { LogsIcon } from '@lucide/astro';
 // Get all data 'src/articles/products/' entries
 const ProductsCol = await getCollection('blogCollection');
 //const slide = await getCollection('slide');
@@ -17,9 +18,13 @@ const ProductsCol = await getCollection('blogCollection');
 
             <div id="Menu" class="items-center shadow-xl">
 
-                
-                <ul class="flex items-start flex-wrap">
-					<!-- Trang chủ -->
+                <div id="MenuMobile" class="my-2">
+                    <LogsIcon size="32" class="inline" />
+                    <p class="inline pl-2">Menu</p>
+                </div>
+                <ul id="MenuCom" class="flex items-start flex-wrap">
+					
+                    <!-- Trang chủ -->
                     <li id="Menu-items">
 						<a href="/">
 							Trang chủ (Dynamics)
@@ -27,13 +32,13 @@ const ProductsCol = await getCollection('blogCollection');
 					</li>
                             {ProductsCol.filter(product => product.data.parent === 'none').map((product) => 
                                 <ul id="Menu-items" class="drophover">
-                                <a href={`/products/${product.id}`}>
+                                <a href={`/products/${product.id}`} class="menitext">
                                     {product.data.title}
                                 </a>
                                 <ul class="bg-sky-500 drop">
                                     {ProductsCol.filter(productsub => productsub.data.parent === product.data.catergory ).map(
                                         productsub => 
-                                        <li class="flex min-w-[240px] flex-col gap-1 p-1.5">
+                                        <li class="menitext flex min-w-[240px] flex-col gap-1 p-1.5">
                                             <a href={`/products/${productsub.id}`}>
                                                 {productsub.data.title}
                                             </a>
@@ -57,6 +62,9 @@ const ProductsCol = await getCollection('blogCollection');
         max-width: 100%;
         margin-top: 10px;
         border-radius: 5px;
+    }
+    #MenuMobile {
+        display: none;
     }
     #Menu-items {
         padding: 6pt;
@@ -95,5 +103,28 @@ const ProductsCol = await getCollection('blogCollection');
         border-radius: 5px;
         transition: 0.35s, display .45s;
         cursursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+        #Menu-items a {
+            font-size: 1rem;
+        }
+        #Menu-items {
+            background-color: aqua;
+        }
+        #MenuMobile {
+            display: block;
+            transition: all 0.5s;
+        }
+        #MenuMobile:hover {
+            background-color: aqua;
+            display: block;
+        }
+        #MenuCom {
+            display: none;
+        }
+        #MenuMobile p{
+            font-size: larger;
+        }
     }
 </style>

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tuicaocap.md",
+                "file": "thiep/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tuicaocap"
+              "title": "index"
             }
           }
         ],
@@ -200,7 +200,31 @@
   },
   "active": "e61385000f39591a",
   "lastOpenFiles": [
-    "tuikraft.md",
-    "tuicaocap.md"
+    "MENUTHIEP/index.md",
+    "inmenu/index.md",
+    "voucher/index.md",
+    "tuizip/index.md",
+    "tuiniemphong/index.md",
+    "tuikraft/index.md",
+    "tuikraftnau/index.md",
+    "tuikrafthongdao/index.md",
+    "tuikraftcosan/index.md",
+    "tuihopdungqualetet/index.md",
+    "TUIGIAYKRAFT/index.md",
+    "tuicaocap/index.md",
+    "toroi/index.md",
+    "thietkecondau/index.md",
+    "thietkebanghieu/index.md",
+    "thiep/index.md",
+    "temvo/index.md",
+    "temdecal/index.md",
+    "TEMDECALP/index.md",
+    "TAGTREOCARD/index.md",
+    "tagtreo/index.md",
+    "phieushiphang/index.md",
+    "phieugiuxe/index.md",
+    "phieubiennhandienthoai/index.md",
+    "logo/index.md",
+    "inso/index.md"
   ]
 }

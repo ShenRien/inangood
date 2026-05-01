@@ -6,7 +6,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -21,6 +21,7 @@
     "astro": "^6.1.10",
     "astro-splide": "^2.0.2",
     "fast-glob": "^3.3.3",
+    "lan-network": "^0.2.1",
     "splide": "^0.0.1-security",
     "tailwindcss": "^4.2.2"
   }

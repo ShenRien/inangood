@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { file } from 'astro:schema';
 const blogCollection = defineCollection({
 	// Load Markdown and MDX files in the `src/content/blog/` directory.
 	loader: glob({ base: './src/articles/products/', pattern: '**/*.md' }),
@@ -13,6 +14,7 @@ const blogCollection = defineCollection({
 			catergory: z.string(),
 			parent: z.string(),
 			tags: z.string().array(),
+			id: z.string(),
 		}),
 });
 export const collections = { blogCollection };

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import video from '../assets/banner/video.mp4'
 import Banner1 from '../assets/banner/1.jpg'
 import Banner2 from '../assets/banner/2.jpg'
@@ -9,15 +10,33 @@ import Banner4 from '../assets/banner/4.jpg'
 <div id="flash-container" class="flex flex-col items-center">
  <div id="flash-body" class="grid grid-cols-7 gap-2">
     <div id="flash-image" class="col-span-4">
-        <video class="aspect-3/2 w-full h-auto object-cover rounded-2" height="" controls>
+        <video class="aspect-3/2 w-full h-auto object-cover rounded-2" height="" controls autoplay=true>
         <source src={video} type="video/mp4">
     </video>
     </div>
     <div id="flash-sub" class="border-2 col-span-3 grid grid-cols-2 ">
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner1.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner4.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner2.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
-        <div id="second-img" class="col-span-1 place-content-center justify-center"><img src={Banner3.src} class="aspect-6/5 w-full h-full col-span-4 object-cover rounded-1" /></div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center">
+            <Image src={Banner1} alt="" 
+                class:list={"aspect-6/5 w-full h-full col-span-4 object-cover rounded-1"}
+                loading="lazy"/>
+        </div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center">
+            <Image 
+                src={Banner4}
+                alt=""
+                class:list={"aspect-6/5 w-full h-full col-span-4 object-cover rounded-1"}
+                loading="lazy"
+            />
+        </div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center">
+            <Image src={Banner2} alt=""
+                class:list={"aspect-6/5 w-full h-full col-span-4 object-cover rounded-1"}
+                loading="lazy" />
+        </div>
+        <div id="second-img" class="col-span-1 place-content-center justify-center">
+            <Image src={Banner3} alt="" 
+                class:list={"aspect-6/5 w-full h-full col-span-4 object-cover rounded-1"}
+                loading="lazy"/>
     </div>
  </div>
 </div>
@@ -81,5 +100,17 @@ import Banner4 from '../assets/banner/4.jpg'
     img {
         border-radius: 8px;
     }
-    
+    @media screen and (max-width: 600px) {
+        #flash-body {
+            display: flex;
+            flex-direction: column;
+        }
+        #flash-img {
+            padding: 0.1rem;
+            width: 100%;
+        }
+        #flash-sub {
+            width: 100%;
+        }
+    }
 </style>

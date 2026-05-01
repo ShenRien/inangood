@@ -21,6 +21,9 @@
         "type": "string"
       }
     },
+    "id": {
+      "type": "string"
+    },
     "$schema": {
       "type": "string"
     }
@@ -30,6 +33,7 @@
     "date",
     "catergory",
     "parent",
-    "tags"
+    "tags",
+    "id"
   ]
 }
