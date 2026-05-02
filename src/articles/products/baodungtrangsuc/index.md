@@ -11,6 +11,8 @@ image:
 catergory: Bao đựng trang sức
 parent: Bao giấy - Folder
 id: baodungtrangsuc
+images:
+  - none
 ---
 # Bao Đựng Trang Sức – Tinh Tế, Bảo Vệ Tốt & Nâng Tầm Giá Trị Sản Phẩm
 

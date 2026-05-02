@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "products/template/template.md",
+                "file": "products/baothu/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "template"
+              "title": "index"
             }
           }
         ],
@@ -200,6 +200,27 @@
   },
   "active": "f22622206fdc631b",
   "lastOpenFiles": [
+    "products/baolixi/index.md",
+    "products/BAOGIAYFOLDER/index.md",
+    "products/baodungtrangsuc/index.md",
+    "products/baobanhmi/index.md",
+    "products/BANGHOPDONG/index.md",
+    "products/ANPHAMKHAC/index.md",
+    "products/bangdaotaonghe/index.md",
+    "products/bangdaotaonghe/img12.jpg",
+    "products/bangdaotaonghe/img11.jpg",
+    "products/bangdaotaonghe/img10.jpg",
+    "products/bangdaotaonghe/img9.jpg",
+    "products/bangdaotaonghe/img8.jpg",
+    "products/bangdaotaonghe/img7.jpg",
+    "products/bangdaotaonghe/img6.jpg",
+    "products/bangdaotaonghe/img5.jpg",
+    "products/bangdaotaonghe/img4.jpg",
+    "products/bangdaotaonghe/img3.jpg",
+    "products/bangdaotaonghe/vid4.mp4",
+    "products/bangdaotaonghe/vid3.mp4",
+    "products/bangdaotaonghe/vid2.mp4",
+    "products/bangdaotaonghe/vid1.mp4",
     "products/template/param.md",
     "products/template/template.md",
     "products/phieugiuxe.md",
@@ -219,21 +240,7 @@
     "products/BOCTUI.md",
     "products/BAOGIAYFOLDER.md",
     "products/ANPHAMKHAC.md",
-    "products/temvo.md",
-    "products/tuicaocap.md",
-    "products/thietkebanghieu.md",
-    "products/logo.md",
-    "products/thietkecondau.md",
-    "products/baolixi.md",
-    "products/Folder.md",
     "products/template",
-    "z7123338921559_e5e9a3b10a7e5f3bad78f298782f4585.jpg",
-    "z7098579478749_99079c6320c01a631e83f33a1d87da36.jpg",
-    "products/tuikraft/z7000389932267_8110a5561e6ae704133cc0b53ddf8a1e.jpg",
-    "products/tuikraft",
-    "products/tuikraft/z7000389917021_471dc38922b1e63509cd682cde71c71a.jpg",
-    "products/tuikraft/z6973094739921_2e6f88ef97f243418b6437750fab6d08.jpg",
-    "products/tuikraft/z6973093850895_9706e1071c04dd86b0c4e8f7292f2283.jpg",
-    "products/tuikraft/z6906080979863_a60f8d983ec6c2bce8a41c08bbabf41f.jpg"
+    "products/tuikraft"
   ]
 }

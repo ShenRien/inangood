@@ -10,5 +10,7 @@ image:
 catergory: Ấn phẩm khác
 parent: none
 id: anphamkhac
+images:
+  - none
 ---
 # Tổng hợp các mục in các ấn phẩm khác trong caterogy

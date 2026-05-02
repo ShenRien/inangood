@@ -10,6 +10,8 @@ image:
 catergory: Bao bánh mì
 parent: Bao giấy - Folder
 id: baobanhmi
+images:
+  - none
 ---
 # Bao Bánh Mì – Sạch Sẽ, Tiện Lợi & Tăng Nhận Diện Thương Hiệu
 

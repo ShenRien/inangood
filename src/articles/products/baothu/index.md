@@ -9,6 +9,8 @@ image:
 catergory: Bao thư
 parent: Bao giấy - Folder
 id: baothu
+images:
+  - none
 ---
 # In Bao Thư (Envelope) – Chuyên Nghiệp, Đồng Bộ & Nâng Tầm Hình Ảnh Doanh Nghiệp
 

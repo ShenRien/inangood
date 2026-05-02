@@ -10,5 +10,7 @@ image:
 catergory: Bằng - Hợp đồng
 parent: none
 id: banghopdong
+images:
+  - none
 ---
 # Tổng hợp các mục in bằng - hợp đồng trong caterogy

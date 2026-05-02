@@ -24,6 +24,12 @@
     "id": {
       "type": "string"
     },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "$schema": {
       "type": "string"
     }

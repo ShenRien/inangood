@@ -2,7 +2,7 @@
 
 // Cấu hình Splide  -  yêu cầu npm install astro-splide @splidejs/splide-extension-auto-scroll
 
-import "@splidejs/splide/css"
+import '@splidejs/splide'
 import { SplideExtension, SplideSlide } from 'astro-splide';
 import type { Options } from '@splidejs/splide';
 import { Debug } from "astro:components";
@@ -41,6 +41,8 @@ import Slide11 from '../assets/slide/35.png'
 import Slide12 from '../assets/slide/36.png'
 import Slide13 from '../assets/slide/37.png'
 import Slide14 from '../assets/slide/38.png'
+
+
 // import { getCollection } from "astro:content";
 
 // const slideCollections = await getCollection('slideCollection');
@@ -64,7 +66,8 @@ import Slide14 from '../assets/slide/38.png'
     <img src={Slide14.src} class="col-span-1" />
 </div>
 -->
-<div id="slideCom" class="content">
+<div  id="slideCom">
+<div class="content">
 <SplideExtension
   options={option}
 >
@@ -109,7 +112,9 @@ import Slide14 from '../assets/slide/38.png'
       </SplideSlide>
 </SplideExtension>
 </div>
-<div id="slideMobile" class="content">
+</div>
+<div  id="slideMobile">
+<div class="content">
 <SplideExtension
   options={optionMobile}
 >
@@ -154,12 +159,14 @@ import Slide14 from '../assets/slide/38.png'
       </SplideSlide>
 </SplideExtension>
 </div>
+</div>
 <style>
   #slideMobile {
     display: none;
   }
   #slideCom {
     display: contents;
+    
   }
   .content {
     width: 1440px;

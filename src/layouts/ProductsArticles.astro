@@ -4,34 +4,38 @@ import Footer from '../components/Footer.astro';
 import BaseHead from '../components/Header.astro'
 import background from '../assets/background.svg';
 import type { CollectionEntry } from "astro:content";
-import Slide9 from '../assets/slide/33.png';
-import "@splidejs/splide/css"
-import { SplideExtension, SplideSlide } from 'astro-splide';
+// Cấu hình Splide  -  yêu cầu npm install astro-splide @splidejs/splide-extension-auto-scroll
+
 import type { Options } from '@splidejs/splide';
-import { Debug } from "astro:components";
-import { Image } from 'astro:assets';
-import type { ImageMetadata } from 'astro';
+import '@splidejs/splide'
+import { SplideExtension, SplideSlide } from 'astro-splide';
+import Image from 'astro/components/Image.astro';
 
 type Props = CollectionEntry<"blogCollection">["data"];
-const { title, date, catergory, parent, id } = Astro.props;
+const { title, date, catergory, parent, id, images } = Astro.props;
 
-const option: Options = {
-    type: 'loop',
-    drag: 'free',
-    focus: 'center',
-    perPage: 1,
-}
-
-interface PropsImg {
+export interface PropsImg {
    imagePath: string;
    altText: string;
    name: string;
    age: number;
 }
 
+const option: Options = {
+    type: 'loop',
+    drag: 'free',
+    focus: 'center',
+    perPage: 1,
+    autoScroll: {
+        speed: 1,
+    },
+}
+
+
+console.log(images);
 //import { getEntry, render } from 'astro:content';
 //const products = Object.values(import.meta.glob(, {eager: true }));
-const images = import.meta.glob<{ default: ImageMetadata }>(`./articles/products/{id}/*.png`)
+
 
 ---
 <Layout>
@@ -45,7 +49,14 @@ const images = import.meta.glob<{ default: ImageMetadata }>(`./articles/products
 				<p>Danh mục: {parent === "none" ? catergory : parent} </p>
 				<div id="desimg" class="grid grid-cols-2 my-3">
 					<div id="preview" class="col-span-1">
-						<img src={Slide9.src} />
+							
+							{images?.map(img =>
+								<video class="mySlides" src=`${img}` controls />
+								<Image class="mySlides" src=`${img}` alt="" width={150} height={300} />			
+							)}
+							<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>	
+
 					</div>
 					<div id="desselect" class="col-span-1 p-5">
 						Chọn quy cách
@@ -80,7 +91,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(`./articles/products
 					<img id="background" src={background.src} alt="" fetchpriority="high" />
 					<div id="desdate"><p>"Cập nhật ngày:" {date}</p></div>
 					<!-- Slot cho content! -->
-					<slot />	
+					<slot slot="content" />	
 				</div>
 
 			</div>
@@ -243,3 +254,41 @@ const images = import.meta.glob<{ default: ImageMetadata }>(`./articles/products
 		}		
 	}
 </style>
+
+
+
+
+<script>
+
+//Javascript Slider
+// Source - https://stackoverflow.com/a/58773720
+// Posted by Jonas Wilms, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-05-02, License - CC BY-SA 4.0
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides") as HTMLCollectionOf<HTMLElement>;;
+  var dots = document.getElementsByClassName("demo") as HTMLCollectionOf<HTMLElement>;;
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+</script>

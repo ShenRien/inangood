@@ -15,7 +15,15 @@ const blogCollection = defineCollection({
 			parent: z.string(),
 			tags: z.string().array(),
 			id: z.string(),
+			images: z.string().array().optional(),
 		}),
 });
-export const collections = { blogCollection };
+
+const imgCollection = defineCollection({
+	// Load Markdown and MDX files in the `src/content/blog/` directory.
+	loader: glob({ base: './src/articles/products/', pattern: '**/*.png' }),
+	// Type-check frontmatter using a schema
+	schema: z.string(),
+});
+export const collections = { blogCollection, imgCollection };
 

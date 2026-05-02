@@ -7,7 +7,7 @@ const ProductsCol = await getCollection('blogCollection');
 <div id="cater-container" class="flex justify-center">
     <!-- Về sau thay này thành category của từng mục sản phẩm -->
 <div id="catergory">
-         {ProductsCol.map((product) => 
+         {ProductsCol.slice(0, 15).map((product) => 
                 <ul class="inline-block flex-wrap flex" >
                 {product.data.tags.map((tag) =>
                     <li class=" m-1 flex flex-col inline-block flex-wrap">

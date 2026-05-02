@@ -10,5 +10,7 @@ image:
 catergory: Bao giấy - Folder
 parent: none
 id: baogiayfolder
+images:
+  - none
 ---
 # Tổng hợp các mục in Bao giấy - Folder trong caterogy

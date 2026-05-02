@@ -9,6 +9,8 @@ image:
 catergory: Bao lì xì
 parent: Bao giấy - Folder
 id: baolixi
+images:
+  - none
 ---
 # In Bao Lì Xì – May Mắn, Thẩm Mỹ & Nâng Tầm Thương Hiệu Dịp Tết
 
