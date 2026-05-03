@@ -52,13 +52,14 @@ console.log(images);
 					<div id="preview" class="col-span-1">
 							
 							{images?.map(img =>
+							(img === "none") ? <div>Chưa cập nhật ảnh hiển thị</div> :
 								<video class="mySlides" src=`${img}` controls />
 								<Image class="mySlides" src=`${img}` alt="" width={150} height={300} />			
 							)}
 							<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
 							<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>	
 
-						<slot />
+						<!---<slot /> -->
 					</div>
 					<div id="desselect" class="col-span-1 p-5">
 						Chọn quy cách
