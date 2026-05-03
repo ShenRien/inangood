@@ -17,31 +17,31 @@ import MaterialSec from '../components/MaterialSec.astro';
 		<div id="red-intro"><p>GIÁ GỐC - NHẬN TỪ 50 TÚI</p></div>
 		<p id="intro-h2">CÓ HÀNG TRONG NGÀY</p>
 
-		<div class="grid grid-cols-5">
-			<ul id="intro-list" class="col-span-2">
+		<div id="intro-list-contain" class="grid grid-cols-5">
+		<ul id="intro-list" class="col-span-2 md:col-span-4">
 
-		<li class="items-start grid grid-cols-10">
-		<CircleCheckBig size={44} />
-		<p style="padding: 0; padding-left: 1rem; padding-bottom: 2rem;" class="col-span-9"> Cần in túi giấy để kịp bán hàng</p>
+		<li class="items-start flex flex-row">
+		<pre><CircleCheckBig size={44} /></pre>
+		<p style="padding: 0; padding-bottom: 0.5rem;" class=""> Cần in túi giấy để kịp bán hàng</p>
 		</li>
 
-		<li class="items-start grid grid-cols-10">
-		<Printer size={44} />
-		<p style="padding: 0; padding-left: 1rem; padding-bottom: 2rem;" class="col-span-9"> Xưởng in trực tiếp - làm nhanh, lấy liền, không cần số lượng lớn.</p>
+		<li class="items-start  flex flex-row">
+		<pre><Printer size={44} /></pre></pre>
+		<p style="padding: 0; padding-left: 1rem; padding-bottom: 0.5rem;" class="col-span-9"> Xưởng in trực tiếp - làm nhanh, lấy liền, không cần số lượng lớn.</p>
 		</li>
 		
-		<li class="items-start grid grid-cols-10">
-		<Layers style="display: block;" size={44} />
-		<p style="padding: 0; padding-left: 1rem; padding-bottom: 2rem;" class="col-span-9"> Chỉ từ 50 túi, bạn đã có túi giấy in logo riêng - 
+		<li class="items-start  flex flex-row">
+		<pre><Layers style="display: block;" size={44} /></pre>
+		<p style="padding: 0; padding-left: 1rem; padding-bottom: 0.5rem;" class="col-span-9"> Chỉ từ 50 túi, bạn đã có túi giấy in logo riêng - 
 			phù hợp shop mới, bán online hoặc test thị trường.</p>
 		</li>
 
-		<div class="items-start grid grid-cols-10">
-		<ClockCheck style="display: inline-block;" size={44} />
-		<p style="padding: 0; padding-left: 1rem; padding-bottom: 2rem;" class="col-span-9"> Ngoài ra, xưởng nhận in trọn bộ: Hóa đơn,
+		<li class="items-start  flex flex-row">
+		<pre><ClockCheck style="display: inline-block;" size={44} /></pre>
+		<p style="padding: 0; padding-left: 1rem; padding-bottom: 0.5rem;" class="col-span-9"> Ngoài ra, xưởng nhận in trọn bộ: Hóa đơn,
 			 tem nhãn, tag treo, voucher, menu, bao bì đóng gói
 			  -> giúp bạn có bộ nhận diện đồng bộ, bán chuyên nghiệp hơn.</p>
-		</div>
+		</li>
 	
 	</ul>
 	</div>
@@ -243,6 +243,74 @@ import MaterialSec from '../components/MaterialSec.astro';
 	}
 
 	@media screen and (max-width: 768px) {
+		#intro-list > li {
+			background-color: #dedede22;
+			padding-top: 1rem;
+			padding-left: 0.5rem;
+			margin-top: 0.3rem;
+			margin-bottom: 0.3rem;
+			border-radius: 0.5rem;
+			backdrop-filter: blur(35px);
+		}
+		#intro-list-contain {
+			display: flex;
+			flex-direction: column;
+		}
+		#intro-list > li > p {
+		padding: 1rem;
+		padding-left: 1rem !important;
+		padding-right: 0.2rem !important;
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		color: #111827;
+	}
+	#intro-h2 {
+		font-size: 1.5rem !important;
+		color: #781722 !important;
+		line-height: 2.5rem;
+		font-weight: 600;
+		padding: 0;
+		padding-top: 0rem;
+		padding-bottom: 0.3rem;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+	}
+	/** GIÁ GỐC NHẬN TỪ 50 TÚI */
+	#red-intro {
+		background-color: #781722;
+		padding: 0.1rem;
+		margin-top: .3rem;
+		border-radius: 20px;
+		position: relative;
+		display: inline-block;
+		line-height: 1rem;
+	}
+	#red-intro p {
+		color: white;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		padding-top: 0.6rem;
+		padding-bottom: 0.5rem;
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 2rem;
+	}
+	/** TÚI GIẤY KRAFT */
+	#intro-title {
+		color: #781722 !important;
+		font-size: 4rem !important;
+		font-family: Tahoma, sans-serif !important;
+		font-weight: 900;
+		line-height: 3rem;
+	}
+	#XI {
+		color: #717171;
+		font-size: 2rem;
+		font-weight: 600;
+	}
+	#intro {
+		padding: 0.6rem;
+	}
 		#container {
 			display: flex;
 			flex-direction: column;

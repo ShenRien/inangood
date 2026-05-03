@@ -12,6 +12,7 @@ type Props = CollectionEntry<'blogCollection'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+console.log(`post id la: ${post.id}`)
 
 ---
 <ProductArticles {...post.data}>

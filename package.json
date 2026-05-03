@@ -19,7 +19,11 @@
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.2.1",
+<<<<<<< HEAD
     "astro-splide": "^2.1.0",
+=======
+    "astro-splide": "^2.0.2",
+>>>>>>> ea2e6bb (commit at Sunday)
     "fast-glob": "^3.3.3",
     "lan-network": "^0.2.1",
     "splide": "^0.0.1-security",
