@@ -4,17 +4,13 @@ import Footer from '../components/Footer.astro';
 import BaseHead from '../components/Header.astro'
 import background from '../assets/background.svg';
 import type { CollectionEntry } from "astro:content";
-<<<<<<< HEAD
 // Cấu hình Splide  -  yêu cầu npm install astro-splide @splidejs/splide-extension-auto-scroll
 
 import type { Options } from '@splidejs/splide';
 import '@splidejs/splide'
 import { SplideExtension, SplideSlide } from 'astro-splide';
 import Image from 'astro/components/Image.astro';
-=======
 import "@splidejs/splide/css"
-import type { Options } from '@splidejs/splide';
->>>>>>> ea2e6bb (commit at Sunday)
 
 type Props = CollectionEntry<"blogCollection">["data"];
 const { title, date, catergory, parent, id, images } = Astro.props;
@@ -39,12 +35,9 @@ const option: Options = {
 
 console.log(images);
 //import { getEntry, render } from 'astro:content';
-<<<<<<< HEAD
 //const products = Object.values(import.meta.glob(, {eager: true }));
 
 
-=======
->>>>>>> ea2e6bb (commit at Sunday)
 ---
 <Layout>
     <head>
@@ -57,7 +50,6 @@ console.log(images);
 				<p>Danh mục: {parent === "none" ? catergory : parent} </p>
 				<div id="desimg" class="grid grid-cols-2 my-3">
 					<div id="preview" class="col-span-1">
-<<<<<<< HEAD
 							
 							{images?.map(img =>
 								<video class="mySlides" src=`${img}` controls />
@@ -66,9 +58,7 @@ console.log(images);
 							<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
 							<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>	
 
-=======
 						<slot />
->>>>>>> ea2e6bb (commit at Sunday)
 					</div>
 					<div id="desselect" class="col-span-1 p-5">
 						Chọn quy cách
