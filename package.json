@@ -1,18 +1,28 @@
 {
-  "name": "vastra-astro",
+  "name": "nodemodule",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/rss": "^4.0.15",
-    "@astrojs/sitemap": "^3.7.0",
-    "astro": "^5.18.1",
-    "sharp": "^0.34.3"
+    "@astrojs/mdx": "^5.0.4",
+    "@astrojs/sitemap": "^3.7.2",
+    "@lucide/astro": "^1.11.0",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.2.1",
+    "astro-splide": "^2.1.0",
+    "fast-glob": "^3.3.3",
+    "lan-network": "^0.2.1",
+    "splide": "^0.0.1-security",
+    "tailwindcss": "^4.2.2"
   }
 }
